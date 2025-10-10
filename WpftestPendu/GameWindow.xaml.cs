@@ -45,6 +45,8 @@ namespace WpftestPendu
             // 2 Génération des boutons de l'alphabet
             GenerateLetterButtons();
 
+            // 3. Afficher l'image de départ (0 erreur)
+            UpdateHangmanImage();
            
         }
 
@@ -182,7 +184,7 @@ namespace WpftestPendu
             // Assurez-vous d'avoir une image correspondante pour chaque étape
             // Exemple : si remainingAttempts est 5 (1 faute), mistakesCount est 1. On charge hangman_1.png
 
-            string imagePath = $"Images/hangman_{mistakesCount}.png"; // Ajustez le chemin de votre dossier Images
+            string imagePath = $"Image/1erreur{mistakesCount}.png"; // Ajustez le chemin de votre dossier Images
 
             try
             {

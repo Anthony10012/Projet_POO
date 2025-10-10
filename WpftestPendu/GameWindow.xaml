@@ -17,7 +17,7 @@
 
         <Rectangle HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="1"/>
 
-        <Image x:Name="hangmanImage" HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" VerticalAlignment="Top" Width="391" Grid.Column="1" Source="Images/hangman_0.png"/>
+        <Image x:Name="hangmanImage" HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" VerticalAlignment="Top" Width="391" Grid.Column="1" Source="Image/1erreur0.png"/>
 
         <TextBlock x:Name="hiddenWordTextBlock" 
                    Foreground="White" 
