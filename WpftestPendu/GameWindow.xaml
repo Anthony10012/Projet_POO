@@ -11,9 +11,9 @@
         <Rectangle HorizontalAlignment="Left" Height="48" Margin="164,416,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="1"/>
 
         <TextBlock HorizontalAlignment="Left" Height="33" Margin="164,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="26" FontFamily="Freestyle Script" Grid.Column="1" Text="Jeu du pendu"/>
-        <TextBlock HorizontalAlignment="Left" Height="46" Margin="652,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="Black" Foreground="White" FontSize="24" Grid.Column="1" Text="Score :"/>
+        <TextBlock  x:Name="scoreTextBlock"   HorizontalAlignment="Left" Height="46" Margin="652,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="Black" Foreground="White" FontSize="24" Grid.Column="1" Text="Score :"/>
         <TextBlock x:Name="pseudoTextBlock"   HorizontalAlignment="Left"   Height="46" Margin="338,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="Black" Foreground="White" FontSize="24" Grid.Column="1" Text="Pseudo"/>
-        <Button Content="Back" HorizontalAlignment="Left" Height="46" Margin="523,21,0,0" VerticalAlignment="Top" Width="105" Background="#FF9C9C9C" Foreground="White" FontSize="24" Grid.Column="1" Cursor="Hand"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="46" Margin="523,21,0,0" VerticalAlignment="Top" Width="105" Background="#FF9C9C9C" Foreground="White" FontSize="24" Grid.Column="1" Cursor="Hand" Click="BackButton_Click"/>
 
         <Rectangle HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="1"/>
 
@@ -29,6 +29,7 @@
                    Grid.Column="1" 
                    Width="391" 
                    TextAlignment="Center"/>
+       
 
         <Rectangle HorizontalAlignment="Left" Height="376" Margin="594,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="222" Fill="DimGray" Grid.Column="1"/>
 

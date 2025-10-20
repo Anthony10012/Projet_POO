@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.X509;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -26,6 +27,8 @@ namespace WpftestPendu
         private const int MAX_ATTEMPTS = 6;
         private int remainingAttempts =MAX_ATTEMPTS;
 
+        private int currentScore = 0;
+
         public GameWindow(string selectedWord,string userPseudo)
         {
             InitializeComponent();
@@ -45,7 +48,10 @@ namespace WpftestPendu
             // 2 Génération des boutons de l'alphabet
             GenerateLetterButtons();
 
-            // 3. Afficher l'image de départ (0 erreur)
+            // 3. Affichage initial du score
+            UpdateScoreDisplay();
+
+            // 4. Afficher l'image de départ (0 erreur)
             UpdateHangmanImage();
            
         }
@@ -121,7 +127,8 @@ namespace WpftestPendu
 
             // Utilisé pour reconstruire le mot masqué
             StringBuilder newHiddenWord = new StringBuilder();
-            bool letterFound = false;
+            
+            int lettersRevealedCount = 0;
 
             // 1. On parcourt le mot secret (wordToGuess)
             for (int i = 0; i < wordToGuess.Length; i++)
@@ -131,7 +138,7 @@ namespace WpftestPendu
                 {
                     // La lettre a été trouvée : on l'ajoute à la nouvelle chaîne
                     newHiddenWord.Append(guessedLetter);
-                    letterFound = true;
+                    lettersRevealedCount++; // Incrementation pour chaque occuren e
                 }
                 else
                 {
@@ -157,21 +164,24 @@ namespace WpftestPendu
             currentHiddenWord = newHiddenWord.ToString();
             hiddenWordTextBlock.Text = currentHiddenWord;
 
-            if (letterFound)
+            if (lettersRevealedCount > 0)
             {
                 // La lettre était bonne !
                 clickedButton.Background = Brushes.LightGreen;
 
+                currentScore += (10 * lettersRevealedCount); // 10 points pour chaque bonne réponse trouvé
+                UpdateScoreDisplay();
                 // **Vérifiez si le joueur a gagné ici !**
                 if (!currentHiddenWord.Contains("_"))
                 {
                     MessageBox.Show("Félicitations, vous avez trouvé le mot !", "Gagné");
-                    
+
+                    // Logique de Score
+                    currentScore += 100; //Bonus pour avoir gagné
+                    UpdateScoreDisplay();
+
                     // Desactivation de toutes les lettres pour arreter le jeu
                     DisableAllLetterButtons();
-                    
-                    // Ajoutez la logique pour afficher le score et recommencer
-
 
                 }
             }
@@ -187,11 +197,16 @@ namespace WpftestPendu
                 // Vérification de la défaite
                 if (remainingAttempts <= 0)
                 {
-                    MessageBox.Show($"Dommage ! Le mot était : {wordToGuess}", "Perdu");
 
+                    // Logique de Score
+                    currentScore = 0; 
+                    UpdateScoreDisplay();
+
+                    MessageBox.Show($"Dommage ! Le mot était : {wordToGuess}", "Perdu");
+                  
                     // Desactivation de toutes les lettres pour arreter le jeu
                     DisableAllLetterButtons();
-                    // Ajoutez la logique pour afficher le score et recommencer
+                   
                 }
 
    
@@ -221,9 +236,34 @@ namespace WpftestPendu
             {
                 // En cas d'erreur (si l'image n'est pas trouvée)
                 // Vous pouvez laisser un message d'erreur ou ignorer.
+                
             }
         }
-        
+
+        private void UpdateScoreDisplay()
+        {
+            // Assurez-vous que votre TextBlock a x:Name="scoreTextBlock" dans le XAML
+            if (scoreTextBlock != null)
+            {
+                scoreTextBlock.Text = $"Score : {currentScore}";
+            }
+        }
+
+
+       
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // 1. Créer une nouvelle instance de la fenêtre de connexion/accueil
+            //    (Nous supposons que votre fenêtre de login/accueil s'appelle 'MainWindow')
+            LoginWindow loginwindow = new LoginWindow();
+
+            // 2. Afficher la fenêtre d'accueil
+            loginwindow.Show();
+
+            // 3. Fermer la fenêtre de jeu actuelle
+            this.Close();
+        }
 
     }
 }
