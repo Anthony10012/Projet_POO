@@ -94,6 +94,20 @@ namespace WpftestPendu
             }
 
         }
+
+        private void DisableAllLetterButtons()
+        {
+            // Parcourt tous les enfants dans l'UniformGrid nommée 'lettersGrid'
+            foreach (var control in lettersGrid.Children)
+            {
+                // Vérifie si l'enfant est un bouton
+                if (control is Button button)
+                {
+                    // Désactive le bouton
+                    button.IsEnabled = false;
+                }
+            }
+        }
         private void LetterButton_Click(object sender, RoutedEventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -152,7 +166,13 @@ namespace WpftestPendu
                 if (!currentHiddenWord.Contains("_"))
                 {
                     MessageBox.Show("Félicitations, vous avez trouvé le mot !", "Gagné");
+                    
+                    // Desactivation de toutes les lettres pour arreter le jeu
+                    DisableAllLetterButtons();
+                    
                     // Ajoutez la logique pour afficher le score et recommencer
+
+
                 }
             }
             else
@@ -168,6 +188,9 @@ namespace WpftestPendu
                 if (remainingAttempts <= 0)
                 {
                     MessageBox.Show($"Dommage ! Le mot était : {wordToGuess}", "Perdu");
+
+                    // Desactivation de toutes les lettres pour arreter le jeu
+                    DisableAllLetterButtons();
                     // Ajoutez la logique pour afficher le score et recommencer
                 }
 

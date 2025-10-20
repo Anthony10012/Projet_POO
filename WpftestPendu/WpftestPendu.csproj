@@ -9,11 +9,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1erreur0.png" />
+    <None Remove="1erreur1.png" />
+    <None Remove="1erreur2.png" />
+    <None Remove="1erreur3.png" />
+    <None Remove="1erreur4.png" />
+    <None Remove="1erreur5.png" />
+    <None Remove="1erreur6.png" />
+    <None Remove="Image\1erreur0.png" />
+    <None Remove="Image\1erreur1.png" />
+    <None Remove="Image\1erreur2.png" />
+    <None Remove="Image\1erreur3.png" />
+    <None Remove="Image\1erreur4.png" />
+    <None Remove="Image\1erreur5.png" />
+    <None Remove="Image\1erreur6.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="9.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Image\1erreur0.png" />
+    <Resource Include="Image\1erreur1.png" />
+    <Resource Include="Image\1erreur2.png" />
+    <Resource Include="Image\1erreur3.png" />
+    <Resource Include="Image\1erreur4.png" />
+    <Resource Include="Image\1erreur5.png" />
+    <Resource Include="Image\1erreur6.png" />
   </ItemGroup>
 
 </Project>

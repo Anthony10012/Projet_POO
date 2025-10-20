@@ -83,3 +83,46 @@ C:\Users\pv22nbo\OneDrive - Education Vaud\Bureau\JeuduPendu\WpftestPendu\obj\De
 C:\Users\pv22nbo\OneDrive - Education Vaud\Bureau\JeuduPendu\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.pdb
 C:\Users\pv22nbo\OneDrive - Education Vaud\Bureau\JeuduPendu\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.genruntimeconfig.cache
 C:\Users\pv22nbo\OneDrive - Education Vaud\Bureau\JeuduPendu\WpftestPendu\obj\Debug\net8.0-windows\ref\WpftestPendu.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\WpftestPendu.exe
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\WpftestPendu.deps.json
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\WpftestPendu.runtimeconfig.json
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\WpftestPendu.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\WpftestPendu.pdb
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.csproj.AssemblyReference.cache
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\GameWindow.baml
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\LoginWindow.baml
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\GameWindow.g.cs
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\LoginWindow.g.cs
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu_MarkupCompile.cache
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu_MarkupCompile.lref
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.g.resources
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.AssemblyInfoInputs.cache
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.AssemblyInfo.cs
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.csproj.CoreCompileInputs.cache
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.sourcelink.json
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestP.2D15AEAE.Up2Date
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\refint\WpftestPendu.dll
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.pdb
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\WpftestPendu.genruntimeconfig.cache
+C:\Users\Simon\Source\Repos\Projet_POO\WpftestPendu\obj\Debug\net8.0-windows\ref\WpftestPendu.dll
