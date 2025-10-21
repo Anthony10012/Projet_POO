@@ -8,7 +8,7 @@
             <ColumnDefinition Width="1046*"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle HorizontalAlignment="Left" Height="48" Margin="164,416,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="48" Margin="75,416,0,0" Stroke="Black" VerticalAlignment="Top" Width="500" Fill="Black" Grid.Column="1"/>
 
         <TextBlock HorizontalAlignment="Left" Height="33" Margin="164,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="26" FontFamily="Freestyle Script" Grid.Column="1" Text="Jeu du pendu"/>
         <TextBlock  x:Name="scoreTextBlock"   HorizontalAlignment="Left" Height="46" Margin="652,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="Black" Foreground="White" FontSize="24" Grid.Column="1" Text="Score :"/>
@@ -25,11 +25,11 @@
                    FontFamily="Courier New"
                    HorizontalAlignment="Left" 
                    VerticalAlignment="Top" 
-                   Margin="164,423,0,0" 
+                   Margin="75,420,0,0" 
                    Grid.Column="1" 
-                   Width="391" 
+                   Width="500" 
                    TextAlignment="Center"/>
-       
+
 
         <Rectangle HorizontalAlignment="Left" Height="376" Margin="594,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="222" Fill="DimGray" Grid.Column="1"/>
 
