@@ -198,12 +198,14 @@ namespace WpftestPendu
                 if (remainingAttempts <= 0)
                 {
 
+                    // Revele le mot directement 
+                    hiddenWordTextBlock.Text = wordToGuess;
+
                     // Logique de Score
                     currentScore = 0; 
                     UpdateScoreDisplay();
 
-                    MessageBox.Show($"Dommage ! Le mot était : {wordToGuess}", "Perdu");
-                  
+
                     // Desactivation de toutes les lettres pour arreter le jeu
                     DisableAllLetterButtons();
                    
