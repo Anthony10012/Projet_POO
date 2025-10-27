@@ -1615,11 +1615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\WpftestPendu\\WpftestPendu\\WpftestPendu.csproj",
+      "projectUniqueName": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\JeuduPendu\\WpftestPendu\\WpftestPendu.csproj",
       "projectName": "WpftestPendu",
-      "projectPath": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\WpftestPendu\\WpftestPendu\\WpftestPendu.csproj",
+      "projectPath": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\JeuduPendu\\WpftestPendu\\WpftestPendu.csproj",
       "packagesPath": "C:\\Users\\pv22nbo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\WpftestPendu\\WpftestPendu\\obj\\",
+      "outputPath": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\JeuduPendu\\WpftestPendu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

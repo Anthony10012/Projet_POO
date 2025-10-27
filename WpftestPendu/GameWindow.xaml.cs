@@ -197,7 +197,7 @@ namespace WpftestPendu
             catch
             {
                 // En cas d'erreur (si l'image n'est pas trouvée)
-                // Vous pouvez laisser un message d'erreur ou ignorer.
+                Console.WriteLine($"Erreur : Impossible de charger l'image à {imagePath}");
             }
         }
         

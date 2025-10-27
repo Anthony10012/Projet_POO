@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "21NQHFcuZAg=",
+  "dgSpecHash": "81m7JplJkUc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\WpftestPendu\\WpftestPendu\\WpftestPendu.csproj",
+  "projectFilePath": "C:\\Users\\pv22nbo\\OneDrive - Education Vaud\\Bureau\\JeuduPendu\\WpftestPendu\\WpftestPendu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pv22nbo\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\pv22nbo\\.nuget\\packages\\google.protobuf\\3.30.0\\google.protobuf.3.30.0.nupkg.sha512",

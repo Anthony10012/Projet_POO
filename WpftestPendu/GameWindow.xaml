@@ -4,20 +4,19 @@
         Title="Jeu du Pendu" Height="569" Width="1089">
     <Grid Margin="0,0,0,-6">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="43*"/>
             <ColumnDefinition Width="1046*"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle HorizontalAlignment="Left" Height="48" Margin="164,416,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="48" Margin="164,416,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="2"/>
 
-        <TextBlock HorizontalAlignment="Left" Height="57" Margin="164,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="48" FontFamily="Freestyle Script" Grid.Column="1" Text="Jeu du pendu"/>
-        <TextBlock HorizontalAlignment="Left" Height="46" Margin="652,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="Black" Foreground="White" FontSize="24" Grid.Column="1" Text="Score :"/>
-        <TextBlock x:Name="pseudoTextBlock"   HorizontalAlignment="Left"   Height="46" Margin="338,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="Black" Foreground="White" FontSize="24" Grid.Column="1" Text="Pseudo"/>
-        <Button Content="Back" HorizontalAlignment="Left" Height="46" Margin="523,21,0,0" VerticalAlignment="Top" Width="105" Background="#FF9C9C9C" Foreground="White" FontSize="24" Grid.Column="1" Cursor="Hand"/>
+        <TextBlock HorizontalAlignment="Left" Height="57" Margin="164,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" FontSize="48" FontFamily="Freestyle Script" Grid.Column="2" Text="Jeu du pendu"/>
+        <TextBlock HorizontalAlignment="Left" Height="46" Margin="652,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Background="Black" Foreground="White" FontSize="24" Grid.Column="2" Text="Score :"/>
+        <TextBlock x:Name="pseudoTextBlock"   HorizontalAlignment="Left"   Height="46" Margin="338,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="Black" Foreground="White" FontSize="24" Grid.Column="2" Text="Pseudo"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="46" Margin="523,21,0,0" VerticalAlignment="Top" Width="105" Background="#FF9C9C9C" Foreground="White" FontSize="24" Grid.Column="2" Cursor="Hand"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="1"/>
-
-        <Image x:Name="hangmanImage" HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" VerticalAlignment="Top" Width="391" Grid.Column="1" Source="Image/1erreur0.png"/>
+        <Rectangle HorizontalAlignment="Left" Height="242" Margin="164,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="391" Fill="Black" Grid.Column="2"/>
 
         <TextBlock x:Name="hiddenWordTextBlock" 
                    Foreground="White" 
@@ -26,11 +25,11 @@
                    HorizontalAlignment="Left" 
                    VerticalAlignment="Top" 
                    Margin="164,423,0,0" 
-                   Grid.Column="1" 
+                   Grid.Column="2" 
                    Width="391" 
                    TextAlignment="Center"/>
 
-        <Rectangle HorizontalAlignment="Left" Height="376" Margin="594,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="222" Fill="DimGray" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="376" Margin="594,88,0,0" Stroke="Black" VerticalAlignment="Top" Width="222" Fill="DimGray" Grid.Column="2"/>
 
         <UniformGrid x:Name="lettersGrid" 
                      HorizontalAlignment="Left" 
@@ -40,7 +39,8 @@
                      Height="365" 
                      Rows="6" 
                      Columns="5" 
-                     Grid.Column="1"/>
+                     Grid.Column="2"/>
+        <Image x:Name="hangmanImage" HorizontalAlignment="Left" Height="243" Margin="169,88,0,0" VerticalAlignment="Top" Width="392" Grid.Column="2" Source="C:\Users\pv22nbo\OneDrive - Education Vaud\Bureau\JeuduPendu\Image\1erreur0.png" RenderTransformOrigin="0.468,0.154"/>
 
     </Grid>
 </Window>
