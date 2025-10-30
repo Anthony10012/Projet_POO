@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1.X509;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -26,6 +28,8 @@ namespace WpftestPendu
         private const int MAX_ATTEMPTS = 6;
         private int remainingAttempts =MAX_ATTEMPTS;
 
+        private int currentScore = 0;
+
         public GameWindow(string selectedWord,string userPseudo)
         {
             InitializeComponent();
@@ -45,7 +49,10 @@ namespace WpftestPendu
             // 2 Génération des boutons de l'alphabet
             GenerateLetterButtons();
 
-            // 3. Afficher l'image de départ (0 erreur)
+            // 3. Affichage initial du score
+            UpdateScoreDisplay();
+
+            // 4. Afficher l'image de départ (0 erreur)
             UpdateHangmanImage();
            
         }
@@ -94,6 +101,20 @@ namespace WpftestPendu
             }
 
         }
+
+        private void DisableAllLetterButtons()
+        {
+            // Parcourt tous les enfants dans l'UniformGrid nommée 'lettersGrid'
+            foreach (var control in lettersGrid.Children)
+            {
+                // Vérifie si l'enfant est un bouton
+                if (control is Button button)
+                {
+                    // Désactive le bouton
+                    button.IsEnabled = false;
+                }
+            }
+        }
         private void LetterButton_Click(object sender, RoutedEventArgs e)
         {
             Button clickedButton = sender as Button;
@@ -107,7 +128,8 @@ namespace WpftestPendu
 
             // Utilisé pour reconstruire le mot masqué
             StringBuilder newHiddenWord = new StringBuilder();
-            bool letterFound = false;
+            
+            int lettersRevealedCount = 0;
 
             // 1. On parcourt le mot secret (wordToGuess)
             for (int i = 0; i < wordToGuess.Length; i++)
@@ -117,7 +139,7 @@ namespace WpftestPendu
                 {
                     // La lettre a été trouvée : on l'ajoute à la nouvelle chaîne
                     newHiddenWord.Append(guessedLetter);
-                    letterFound = true;
+                    lettersRevealedCount++; // Incrementation pour chaque occuren e
                 }
                 else
                 {
@@ -143,16 +165,28 @@ namespace WpftestPendu
             currentHiddenWord = newHiddenWord.ToString();
             hiddenWordTextBlock.Text = currentHiddenWord;
 
-            if (letterFound)
+            if (lettersRevealedCount > 0)
             {
                 // La lettre était bonne !
                 clickedButton.Background = Brushes.LightGreen;
 
+                currentScore += (10 * lettersRevealedCount); // 10 points pour chaque bonne réponse trouvé
+                UpdateScoreDisplay();
                 // **Vérifiez si le joueur a gagné ici !**
                 if (!currentHiddenWord.Contains("_"))
                 {
                     MessageBox.Show("Félicitations, vous avez trouvé le mot !", "Gagné");
-                    // Ajoutez la logique pour afficher le score et recommencer
+
+                    // 1. Logique de Score
+                    currentScore += 100; //Bonus pour avoir gagné
+                    UpdateScoreDisplay();
+
+                    // Mise à jour du score total du joueur dans la table players
+                    UpdatePlayerTotalScore();
+
+                    // Desactivation de toutes les lettres pour arreter le jeu
+                    DisableAllLetterButtons();
+
                 }
             }
             else
@@ -167,8 +201,19 @@ namespace WpftestPendu
                 // Vérification de la défaite
                 if (remainingAttempts <= 0)
                 {
-                    MessageBox.Show($"Dommage ! Le mot était : {wordToGuess}", "Perdu");
-                    // Ajoutez la logique pour afficher le score et recommencer
+
+                    // Revele le mot directement 
+                    hiddenWordTextBlock.Text = wordToGuess;
+
+                    // Logique de Score
+                    
+                    UpdateScoreDisplay();
+
+                    UpdatePlayerTotalScore();
+
+                    // Desactivation de toutes les lettres pour arreter le jeu
+                    DisableAllLetterButtons();
+                   
                 }
 
    
@@ -197,10 +242,65 @@ namespace WpftestPendu
             catch
             {
                 // En cas d'erreur (si l'image n'est pas trouvée)
-                Console.WriteLine($"Erreur : Impossible de charger l'image à {imagePath}");
+                // Vous pouvez laisser un message d'erreur ou ignorer.
+                
             }
         }
-        
+
+        private void UpdateScoreDisplay()
+        {
+            // Assurez-vous que votre TextBlock a x:Name="scoreTextBlock" dans le XAML
+            if (scoreTextBlock != null)
+            {
+                scoreTextBlock.Text = $"Score : {currentScore}";
+            }
+        }
+
+
+        private void UpdatePlayerTotalScore()
+        {
+            // Récupération de l'ID du joueur et du score de la partie
+            int playerId = WpftestPendu.Player.Id;
+            int scoreGagne = currentScore;
+
+            string connectionString = "server=localhost;user id=root;password=root;database=games_pendu;";
+
+            // Requête SQL pour mettre à jour le score : on ajoute le @scoreGagne au totalscore existant.
+            string sql = "UPDATE players SET totalscore = totalscore + @scoreGagne WHERE id = @playerId";
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue("@scoreGagne", scoreGagne);
+                    cmd.Parameters.AddWithValue("@playerId", playerId);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur lors de la mise à jour du score total : {ex.Message}");
+            }
+        }
+
+
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // 1. Créer une nouvelle instance de la fenêtre de connexion/accueil
+            //    (Nous supposons que votre fenêtre de login/accueil s'appelle 'MainWindow')
+            LoginWindow loginwindow = new LoginWindow();
+
+            // 2. Afficher la fenêtre d'accueil
+            loginwindow.Show();
+
+            // 3. Fermer la fenêtre de jeu actuelle
+            this.Close();
+        }
 
     }
 }

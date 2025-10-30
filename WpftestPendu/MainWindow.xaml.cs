@@ -107,6 +107,8 @@ namespace WpftestPendu
                    
                     GameWindow gameWindow = new GameWindow(selectedWord,WpftestPendu.Player.Pseudo);
                     gameWindow.Show();
+
+                    this.Close();
                 }
                 else
                 {
